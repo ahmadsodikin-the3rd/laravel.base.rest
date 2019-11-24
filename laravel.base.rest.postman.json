@@ -1,0 +1,483 @@
+{
+	"variables": [],
+	"info": {
+		"name": "laravel.base.rest",
+		"_postman_id": "a8e6f12f-341b-761f-3b9f-4ae75b260cb1",
+		"description": "Laravel Restful API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Public",
+			"description": "",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"url": {
+							"raw": "http://localhost/tes/laravel.base.rest/public/api/auth/register?username=test&email=test@mail.com&password=tes12345&confirm_password=tes12345&name=Testing User",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"tes",
+								"laravel.base.rest",
+								"public",
+								"api",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "test",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "email",
+									"value": "test@mail.com",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "tes12345",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "confirm_password",
+									"value": "tes12345",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "Testing User",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"url": {
+							"raw": "http://localhost/tes/laravel.base.rest/public/api/auth/login?username=test&password=tes12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"tes",
+								"laravel.base.rest",
+								"public",
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "test",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "tes12345",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Credential",
+					"request": {
+						"url": {
+							"raw": "http://localhost/tes/laravel.base.rest/public/api/auth/credential/?token=0132242c1c5191fc8282ad62c4a9e0aee3898822d0767d16de7b01c0fb6c9d3a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"tes",
+								"laravel.base.rest",
+								"public",
+								"api",
+								"auth",
+								"credential",
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "0132242c1c5191fc8282ad62c4a9e0aee3898822d0767d16de7b01c0fb6c9d3a",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "User",
+					"description": "",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"url": "http://localhost/tes/laravel.base.rest/public/api/user",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "e79a078305d37fbe588d7851e06312ed8b5adf85c166a45b4174230c3b00ffca",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"url": "http://localhost/tes/laravel.base.rest/public/api/user/7",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "e79a078305d37fbe588d7851e06312ed8b5adf85c166a45b4174230c3b00ffca",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"url": {
+									"raw": "http://localhost/tes/laravel.base.rest/public/api/user?username=test&email=test@mail.com&password=tes12345&confirm_password=tes12345&name=Testing User",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"tes",
+										"laravel.base.rest",
+										"public",
+										"api",
+										"user"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "test",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "email",
+											"value": "test@mail.com",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "password",
+											"value": "tes12345",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "confirm_password",
+											"value": "tes12345",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "name",
+											"value": "Testing User",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "e79a078305d37fbe588d7851e06312ed8b5adf85c166a45b4174230c3b00ffca",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"url": {
+									"raw": "http://localhost/tes/laravel.base.rest/public/api/user/7?name=Name Edited",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"tes",
+										"laravel.base.rest",
+										"public",
+										"api",
+										"user",
+										"7"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Name Edited",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Token",
+										"value": "e79a078305d37fbe588d7851e06312ed8b5adf85c166a45b4174230c3b00ffca",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"url": "http://localhost/tes/laravel.base.rest/public/api/user/2",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Token",
+										"value": "6a70861da19fe69bd5fd790ce346111e1d33fee37a7922386fe00904dbf51178",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Task",
+					"description": "",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"url": "http://localhost/tes/laravel.base.rest/public/api/task",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "e79a078305d37fbe588d7851e06312ed8b5adf85c166a45b4174230c3b00ffca",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"url": "http://localhost/tes/laravel.base.rest/public/api/task/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "e79a078305d37fbe588d7851e06312ed8b5adf85c166a45b4174230c3b00ffca",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"url": {
+									"raw": "http://localhost/tes/laravel.base.rest/public/api/task?name=My first task&start=2019-12-01&due=2019-12-07",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"tes",
+										"laravel.base.rest",
+										"public",
+										"api",
+										"task"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "My first task",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "start",
+											"value": "2019-12-01",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "due",
+											"value": "2019-12-07",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "e79a078305d37fbe588d7851e06312ed8b5adf85c166a45b4174230c3b00ffca",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"url": {
+									"raw": "http://localhost/tes/laravel.base.rest/public/api/task/2?name=My first task Updated",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"tes",
+										"laravel.base.rest",
+										"public",
+										"api",
+										"task",
+										"2"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "My first task Updated",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Token",
+										"value": "e79a078305d37fbe588d7851e06312ed8b5adf85c166a45b4174230c3b00ffca",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"url": "http://localhost/tes/laravel.base.rest/public/api/task/2",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Token",
+										"value": "e79a078305d37fbe588d7851e06312ed8b5adf85c166a45b4174230c3b00ffca",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"url": "http://localhost/tes/laravel.base.rest/public/api/auth/logout",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "0132242c1c5191fc8282ad62c4a9e0aee3898822d0767d16de7b01c0fb6c9d3a",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

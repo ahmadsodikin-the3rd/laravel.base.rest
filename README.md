@@ -14,12 +14,13 @@
 ```sh
 $ composer install
 ```
+- Copy file `.env.example` menjadi `.env`
 - Atur koneksi database di file `.env` dan pastikan koneksi tersebut mempunyai akses untuk create table
 - Setelah itu jalankan command berikut
 ```sh
+$ php artisan key:generate
 $ php artisan migrate
 $ php artisan db:seed
-$ php artisan serve
 ```
-- Setelah proses selesai, buka browser dengan alamat http://127.0.0.1:8000/
+- Setelah proses selesai, buka browser dengan alamat sesuai dengan lokasi repository tersebut (ex. http://localhost/nama_repository/public)
 - Untuk login bisa diakses dengan user:password => admin:admin12345

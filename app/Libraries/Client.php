@@ -44,7 +44,12 @@ class Client{
 			CURLOPT_HEADER => true,
 			CURLOPT_BINARYTRANSFER => true,
 			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_CONNECTTIMEOUT => 30,
+			CURLOPT_TIMEOUT => 5,
+			//CURLOPT_VERBOSE => 1,
+			//CURLOPT_STDERR => fopen(dirname(__FILE__).'/errorlog.txt', 'w'),
+			CURLOPT_FOLLOWLOCATION => false,
+			CURLOPT_SSL_VERIFYHOST => false,
+			CURLOPT_SSL_VERIFYPEER => false,
 		);
 		if($method == 'POST') 
 		{
@@ -60,7 +65,13 @@ class Client{
 		{
 			$args[CURLOPT_POSTFIELDS] = json_encode($params);
 			$args[CURLOPT_HTTPHEADER] = ['Content-type: application/json'];
-		}		
+		}
+		$port = parse_url($this->url, PHP_URL_PORT);
+		if($port)
+		{
+			$args[CURLOPT_PORT] = $port;
+		}
+		
 		
 		if($headers && is_array($headers))
 		{
